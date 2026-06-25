@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>newsletter-sign-up-form-with-success-message</title>
-  <link href="./dist/output.css" rel="stylesheet">
-  <script src="./script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newsletter-sign-up-form-with-success-message</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
-  <h1 class="text-1-bold">newsletter-sign-up-form-with-success-message</h1>
+<body class="flex min-h-screen items-center justify-center bg-gray-100">
+<div class="w-[327px]">
+    <form id="form" class="flex flex-col gap-6" novalidate>
+        <div class="flex flex-col gap-2 text-blue-800">
+            <div class="flex w-full justify-between">
+                <label for="email" class="text-3">Email address</label>
+                <span id="email-error-msg" class="hidden text-3 text-red">Valid email required</span>
+            </div>
+            <input aria-errormessage="email-error-msg" aria-invalid="false" id="email" name="email" type="email"
+                   placeholder="email@company.com"
+                   class="failed:border-red failed:text-red failed:bg-red-100 rounded-[8px] border border-gray px-6 py-4 text-2-regular outline-none focus-visible:border-blue-800"/>
+        </div>
+
+        <button id="subscribe" disabled
+                class="cursor-pointer rounded-[10px] bg-active px-12 py-4 text-2-bold text-nowrap text-white shadow-[0px_16px_32px_0px_#FF6155] disabled:cursor-not-allowed disabled:bg-blue-800 disabled:bg-none disabled:shadow-none">
+            Subscribe to monthly newsletter
+        </button>
+    </form>
+</div>
 </body>
 </html>
