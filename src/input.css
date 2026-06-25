@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+
+  --text-1-bold: 3.5rem;
+  --text-1-bold--line-height: 1;
+  --text-1-bold--letter-spacing: 0;
+  --text-1-bold--font-weight: 700;
+
+  --text-1-mobile: 2.5rem;
+  --text-1-mobile--line-height: 1;
+  --text-1-mobile--letter-spacing: 0;
+  --text-1-mobile--font-weight: 700;
+
+  --text-2-bold: 1rem;
+  --text-2-bold--line-height: 1.5;
+  --text-2-bold--letter-spacing: 0;
+  --text-2-bold--font-weight: 700;
+
+  --text-2-regular: 1rem;
+  --text-2-regular--line-height: 1.5;
+  --text-2-regular--letter-spacing: 0;
+  --text-2-regular--font-weight: 400;
+
+  --text-3: 0.75rem;
+  --text-3--line-height: 1.5;
+  --text-3--letter-spacing: 0;
+  --text-3--font-weight: 700;
+
+  --color-white: #FFFFFF;
+  --color-gray: #949494;
+  --color-blue-800: #242742;
+  --color-blue-700: #36384D;
+  --color-red: #FF6155;
+
+  --background-image-main: linear-gradient(90deg, #FF6A3A, #FF527B);
+
+
+}
