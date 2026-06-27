@@ -5,18 +5,28 @@ const subscribeBtn = document.getElementById('subscribe');
 
 let shouldShowError = false;
 
+subscribeBtn.addEventListener('click', (e) => {
+    e.preventDefault(e);
+    console.log('subscribe');
+})
+
 input.addEventListener('blur', () => {
     shouldShowError = true;
+    validate();
 });
 
 input.addEventListener('input', () => {
+    validate();
+});
+
+function validate() {
     const isValid = validateEmail(input.value);
     if (!isValid && shouldShowError) {
         showErrorState();
     } else if (isValid) {
         showValidState();
     }
-});
+}
 
 function showErrorState() {
     errorMessage.classList.remove('hidden');

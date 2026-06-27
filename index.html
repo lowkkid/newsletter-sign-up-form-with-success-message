@@ -10,24 +10,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class="flex min-h-screen items-center justify-center bg-gray-100">
-<div class="w-[327px]">
-    <form id="form" class="flex flex-col gap-6" novalidate>
-        <div class="flex flex-col gap-2 text-blue-800">
-            <div class="flex w-full justify-between">
-                <label for="email" class="text-3">Email address</label>
-                <span id="email-error-msg" class="hidden text-3 text-red">Valid email required</span>
+<body class="min-h-screen">
+<main class="flex items-center justify-center">
+    <section class="flex flex-col items-center gap-10 bg-white pb-11">
+        <picture>
+            <source media="(min-width: 48rem)" srcset="./assets/images/illustration-sign-up-tablet.svg"/>
+            <source media="(min-width: 90rem)" srcset="./assets/images/illustration-sign-up-desktop.svg"/>
+            <img src="./assets/images/illustration-sign-up-mobile.svg" alt="sign-up-mobile">
+        </picture>
+        <div class="flex w-[327px] flex-col gap-10">
+            <div class="flex flex-col gap-6 text-blue-800">
+                <h1 class="text-1-mobile">Stay updated!</h1>
+                <p class="text-2-regular">Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul class="flex flex-col gap-2">
+                    <li class="flex gap-4 self-center">
+                        <img class="h-[21px] w-[21px]" src="assets/icons/icon-list.svg" alt="Check">
+                        <span class="text-2-regular">Product discovery and building what matters</span>
+                    </li>
+                    <li class="flex gap-4 self-center">
+                        <img class="h-[21px] w-[21px]" src="assets/icons/icon-list.svg" alt="Check">
+                        <span class="text-2-regular">Measuring to ensure updates are a success</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <img class="h-[21px] w-[21px] self-center" src="assets/icons/icon-list.svg" alt="Check">
+                        <span class="text-2-regular">And much more!</span>
+                    </li>
+                </ul>
             </div>
-            <input aria-errormessage="email-error-msg" aria-invalid="false" id="email" name="email" type="email"
-                   placeholder="email@company.com"
-                   class="failed:border-red failed:text-red failed:bg-red-100 rounded-[8px] border border-gray px-6 py-4 text-2-regular outline-none focus-visible:border-blue-800"/>
-        </div>
 
-        <button id="subscribe" disabled
-                class="cursor-pointer rounded-[10px] bg-active px-12 py-4 text-2-bold text-nowrap text-white shadow-[0px_16px_32px_0px_#FF6155] disabled:cursor-not-allowed disabled:bg-blue-800 disabled:bg-none disabled:shadow-none">
-            Subscribe to monthly newsletter
-        </button>
-    </form>
-</div>
+            <form id="form" class="flex flex-col gap-6" novalidate>
+                <div class="flex flex-col gap-2 text-blue-800">
+                    <div class="flex w-full justify-between">
+                        <label for="email" class="text-3">Email address</label>
+                        <span id="email-error-msg" class="hidden text-3 text-red">Valid email required</span>
+                    </div>
+                    <input aria-errormessage="email-error-msg" aria-invalid="false" id="email" name="email" type="email"
+                           placeholder="email@company.com"
+                           class="rounded-[8px] border border-gray px-6 py-4 text-2-regular outline-none focus-visible:border-blue-800 failed:border-red failed:bg-red-100 failed:text-red"/>
+                </div>
+
+                <button id="subscribe" disabled
+                        class="cursor-pointer rounded-[10px] bg-active px-12 py-4 text-2-bold text-nowrap text-white shadow-[0px_16px_32px_0px_#FF6155] disabled:cursor-not-allowed disabled:bg-blue-800 disabled:bg-none disabled:shadow-none">
+                    Subscribe to monthly newsletter
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
 </body>
 </html>
