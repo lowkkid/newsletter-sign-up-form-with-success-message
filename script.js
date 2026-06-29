@@ -1,13 +1,26 @@
-const form = document.getElementById('form');
 const input = document.getElementById('email');
 const errorMessage = document.getElementById('email-error-msg');
-const subscribeBtn = document.getElementById('subscribe');
+const success = document.getElementById('success');
+const subscribe = document.getElementById('subscribe');
 
+const subscribeBtn = document.getElementById('subscribe-btn');
+const dismissBtn = document.getElementById('dismiss');
 let shouldShowError = false;
 
 subscribeBtn.addEventListener('click', (e) => {
-    e.preventDefault(e);
-    console.log('subscribe');
+    e.preventDefault();
+    success.classList.toggle('hidden');
+    success.classList.toggle('flex');
+    subscribe.classList.toggle('hidden');
+    subscribe.classList.toggle('flex');
+
+})
+
+dismissBtn.addEventListener('click', (e) => {
+    success.classList.toggle('hidden');
+    success.classList.toggle('flex');
+    subscribe.classList.toggle('hidden');
+    subscribe.classList.toggle('flex');
 })
 
 input.addEventListener('blur', () => {

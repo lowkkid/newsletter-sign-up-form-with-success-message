@@ -10,25 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen">
-<main class="flex items-center justify-center">
-    <section class="flex flex-col items-center gap-10 bg-white pb-11">
-        <picture>
-            <source media="(min-width: 48rem)" srcset="./assets/images/illustration-sign-up-tablet.svg"/>
+<body id="body" class="flex min-h-screen justify-stretch bg-white md:items-center md:bg-blue-700">
+<main class="mx-auto flex w-full justify-center">
+    <section id="subscribe"
+             class="lg:just flex w-full flex-col items-center gap-10 bg-white pb-11 md:w-[608px] md:rounded-[36px] md:p-10 lg:h-[641px] lg:w-auto lg:flex-row-reverse lg:gap-16 lg:p-8">
+        <picture class="w-full md:w-auto lg:shrink-0">
             <source media="(min-width: 90rem)" srcset="./assets/images/illustration-sign-up-desktop.svg"/>
-            <img src="./assets/images/illustration-sign-up-mobile.svg" alt="sign-up-mobile">
+            <source media="(min-width: 48rem)" srcset="./assets/images/illustration-sign-up-tablet.svg"/>
+            <img src="./assets/images/illustration-sign-up-mobile.svg" alt="sign-up-mobile"
+                 class="max-h-[284px] w-full object-cover md:h-[358px] md:max-h-none md:w-[528px] lg:h-[593px] lg:w-[400px]"/>
         </picture>
-        <div class="flex w-[327px] flex-col gap-10">
-            <div class="flex flex-col gap-6 text-blue-800">
-                <h1 class="text-1-mobile">Stay updated!</h1>
+        <div class="flex w-[327px] flex-col gap-10 md:w-full md:gap-6 lg:gap-8 lg:w-[376px]">
+            <div class="flex flex-col gap-6 text-blue-800 lg:gap-8">
+                <h1 class="text-1-mobile md:text-1-bold">Stay updated!</h1>
                 <p class="text-2-regular">Join 60,000+ product managers receiving monthly updates on:</p>
                 <ul class="flex flex-col gap-2">
-                    <li class="flex gap-4 self-center">
-                        <img class="h-[21px] w-[21px]" src="assets/icons/icon-list.svg" alt="Check">
+                    <li class="flex gap-4">
+                        <img class="h-[21px] w-[21px] self-center" src="assets/icons/icon-list.svg" alt="Check">
                         <span class="text-2-regular">Product discovery and building what matters</span>
                     </li>
-                    <li class="flex gap-4 self-center">
-                        <img class="h-[21px] w-[21px]" src="assets/icons/icon-list.svg" alt="Check">
+                    <li class="flex gap-4">
+                        <img class="h-[21px] w-[21px] self-center" src="assets/icons/icon-list.svg" alt="Check">
                         <span class="text-2-regular">Measuring to ensure updates are a success</span>
                     </li>
                     <li class="flex gap-4">
@@ -38,7 +40,7 @@
                 </ul>
             </div>
 
-            <form id="form" class="flex flex-col gap-6" novalidate>
+            <form id="form" class="flex flex-col gap-6 md:gap-4 lg:gap-6" novalidate>
                 <div class="flex flex-col gap-2 text-blue-800">
                     <div class="flex w-full justify-between">
                         <label for="email" class="text-3">Email address</label>
@@ -49,12 +51,26 @@
                            class="rounded-[8px] border border-gray px-6 py-4 text-2-regular outline-none focus-visible:border-blue-800 failed:border-red failed:bg-red-100 failed:text-red"/>
                 </div>
 
-                <button id="subscribe" disabled
+                <button id="subscribe-btn" disabled
                         class="cursor-pointer rounded-[10px] bg-active px-12 py-4 text-2-bold text-nowrap text-white shadow-[0px_16px_32px_0px_#FF6155] disabled:cursor-not-allowed disabled:bg-blue-800 disabled:bg-none disabled:shadow-none">
                     Subscribe to monthly newsletter
                 </button>
             </form>
         </div>
+    </section>
+    <section id="success"
+             class="my-auto hidden h-[623px] w-[327px] flex-col justify-between rounded-[36px] bg-white md:h-auto md:w-[504px] md:justify-start md:gap-8 md:p-16">
+        <div class="flex flex-col gap-8 text-blue-800">
+            <img src="assets/icons/icon-success.svg" alt="Success" class="h-16 w-16"/>
+            <h1 class="text-1-mobile">Thanks for subscribing!</h1>
+            <p class="text-2-regular">A confirmation email has been sent to ash@loremcompany.com. Please open it and
+                click the button inside to
+                confirm your subscription</p>
+        </div>
+        <button id="dismiss"
+                class="cursor-pointer rounded-[10px] bg-blue-800 bg-none px-12 py-4 text-2-bold text-nowrap text-white shadow-none hover:bg-active hover:shadow-[0px_16px_32px_0px_#FF6155]">
+            Dismiss message
+        </button>
     </section>
 </main>
 

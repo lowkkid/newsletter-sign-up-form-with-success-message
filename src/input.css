@@ -39,5 +39,5 @@
 
   --background-image-active: linear-gradient(90deg, #FF6A3A, #FF527B);
 
-
+  --breakpoint-lg: 90rem;
 }
