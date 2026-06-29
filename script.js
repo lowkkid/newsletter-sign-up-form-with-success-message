@@ -16,7 +16,7 @@ subscribeBtn.addEventListener('click', (e) => {
 
 })
 
-dismissBtn.addEventListener('click', (e) => {
+dismissBtn.addEventListener('click', () => {
     success.classList.toggle('hidden');
     success.classList.toggle('flex');
     subscribe.classList.toggle('hidden');
